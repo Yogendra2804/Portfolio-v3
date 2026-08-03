@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import {
   motion,
   useScroll,
@@ -36,6 +36,14 @@ const SOCIALS = [
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const shouldReduceMotion = useReducedMotion();
+
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 900);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -402,29 +410,31 @@ export default function HeroSection() {
       >
         <div style={{ maxWidth: "clamp(300px, 90%, 520px)" }}>
 
-          {/* Mobile-only avatar — shown only on screens < 900px via globals.css */}
-          <div className="hero-mobile-avatar">
-            <div
-              style={{
-                width: 96,
-                height: 96,
-                borderRadius: "50%",
-                border: "3px solid #7c3aed",
-                boxShadow: "0 0 0 4px rgba(124,58,237,0.2), 0 8px 30px rgba(0,0,0,0.6)",
-                overflow: "hidden",
-                position: "relative",
-                flexShrink: 0,
-              }}
-            >
-              <Image
-                src="/images/profile.png"
-                alt="Yogendra Gupta"
-                fill
-                sizes="96px"
-                style={{ objectFit: "cover", objectPosition: "center top" }}
-              />
+          {/* Mobile-only avatar */}
+          {isMobile && (
+            <div style={{ display: "flex", justifyContent: "flex-start", marginBottom: 24 }}>
+              <div
+                style={{
+                  width: 96,
+                  height: 96,
+                  borderRadius: "50%",
+                  border: "3px solid #7c3aed",
+                  boxShadow: "0 0 0 4px rgba(124,58,237,0.2), 0 8px 30px rgba(0,0,0,0.6)",
+                  overflow: "hidden",
+                  position: "relative",
+                  flexShrink: 0,
+                }}
+              >
+                <Image
+                  src="/images/profile.png"
+                  alt="Yogendra Gupta"
+                  fill
+                  sizes="96px"
+                  style={{ objectFit: "cover", objectPosition: "center top" }}
+                />
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Hi, I'm */}
           <motion.p
