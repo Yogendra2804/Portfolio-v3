@@ -539,4 +539,17 @@ body {
   }
 }
 
-
+/* Hero: mobile profile avatar — hidden on desktop, shown on mobile */
+.hero-mobile-avatar {
+  display: none;
+}
+@media (max-width: 900px) {
+  .hero-mobile-avatar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+  }
+  .hero-right-col {
+    display: none !important;
+  }
+}

@@ -402,17 +402,9 @@ export default function HeroSection() {
       >
         <div style={{ maxWidth: "clamp(300px, 90%, 520px)" }}>
 
-          {/* Mobile-only avatar — shown only on screens < 900px */}
-          <div
-            className="hero-mobile-avatar"
-            style={{
-              display: "none", // overridden to flex by media query
-              justifyContent: "flex-start",
-              marginBottom: 24,
-            }}
-          >
-            <motion.div
-              {...fadeUp(0.15)}
+          {/* Mobile-only avatar — shown only on screens < 900px via globals.css */}
+          <div className="hero-mobile-avatar">
+            <div
               style={{
                 width: 96,
                 height: 96,
@@ -431,7 +423,7 @@ export default function HeroSection() {
                 sizes="96px"
                 style={{ objectFit: "cover", objectPosition: "center top" }}
               />
-            </motion.div>
+            </div>
           </div>
 
           {/* Hi, I'm */}
