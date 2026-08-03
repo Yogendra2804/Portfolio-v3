@@ -402,6 +402,38 @@ export default function HeroSection() {
       >
         <div style={{ maxWidth: "clamp(300px, 90%, 520px)" }}>
 
+          {/* Mobile-only avatar — shown only on screens < 900px */}
+          <div
+            className="hero-mobile-avatar"
+            style={{
+              display: "none", // overridden to flex by media query
+              justifyContent: "flex-start",
+              marginBottom: 24,
+            }}
+          >
+            <motion.div
+              {...fadeUp(0.15)}
+              style={{
+                width: 96,
+                height: 96,
+                borderRadius: "50%",
+                border: "3px solid #7c3aed",
+                boxShadow: "0 0 0 4px rgba(124,58,237,0.2), 0 8px 30px rgba(0,0,0,0.6)",
+                overflow: "hidden",
+                position: "relative",
+                flexShrink: 0,
+              }}
+            >
+              <Image
+                src="/images/profile.png"
+                alt="Yogendra Gupta"
+                fill
+                sizes="96px"
+                style={{ objectFit: "cover", objectPosition: "center top" }}
+              />
+            </motion.div>
+          </div>
+
           {/* Hi, I'm */}
           <motion.p
             {...fadeUp(0.25)}
@@ -699,10 +731,14 @@ export default function HeroSection() {
         />
       </motion.div>
 
-      {/* ── Responsive hide rule for right column on small screens ──────── */}
+      {/* ── Responsive rules ──────────────────────────────────────────────── */}
       <style>{`
         @media (max-width: 900px) {
           .hero-right-col { display: none !important; }
+          .hero-mobile-avatar { display: flex !important; }
+        }
+        @media (min-width: 901px) {
+          .hero-mobile-avatar { display: none !important; }
         }
         @media (min-width: 901px) and (max-width: 1200px) {
           .hero-right-col { right: 1% !important; }
