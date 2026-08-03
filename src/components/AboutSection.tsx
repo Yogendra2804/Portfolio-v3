@@ -53,7 +53,7 @@ export default function AboutSection() {
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+            transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] as [number, number, number, number] }}
             style={{ position: "relative" }}
           >
             {/* Code image */}
@@ -160,7 +160,7 @@ export default function AboutSection() {
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.23, 1, 0.32, 1] as [number, number, number, number] }}
           >
             {/* Section label */}
             <p className="section-label">Dive in</p>
