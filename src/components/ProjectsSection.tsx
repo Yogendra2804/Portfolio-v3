@@ -117,6 +117,35 @@ function ProjectCard({
             }}
           />
 
+          {/* Handcrafted badge — only for the original portfolio */}
+          {project.id === 0 && (
+            <div
+              style={{
+                position: "absolute",
+                bottom: 12,
+                left: 12,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+                padding: "4px 10px",
+                background: "rgba(10,10,15,0.80)",
+                backdropFilter: "blur(12px)",
+                borderRadius: 100,
+                border: `1px solid ${project.color}60`,
+                boxShadow: `0 0 14px ${project.color}30`,
+                color: project.color,
+                fontSize: 10,
+                fontWeight: 700,
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                fontFamily: "monospace",
+              }}
+            >
+              <span style={{ fontSize: 10 }}>✦</span>
+              Handcrafted · Origin
+            </div>
+          )}
+
           {/* GitHub link overlay on hover */}
           <motion.div
             initial={{ opacity: 0 }}
