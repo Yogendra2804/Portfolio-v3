@@ -170,7 +170,7 @@ export const projects = [
       "AI-powered tool that analyzes social media posts from PDFs or images and provides actionable engagement improvements using the Gemini API.",
     longDescription:
       "A full-stack application that analyzes social media posts uploaded as PDFs or images and provides AI-powered engagement improvements. Uses PyMuPDF for PDF extraction, Tesseract OCR for image text extraction, and the Gemini API for tone, clarity, and engagement suggestions — with a deterministic heuristic fallback when the API is unavailable.",
-    image: "/images/project-social-media-analyzer.png",
+    image: "/images/project-social-media-analyzer.jpg",
     tags: ["FastAPI", "React", "Gemini AI", "OCR"],
     techStack: ["Python", "FastAPI", "React", "Vite", "TypeScript", "Tailwind CSS", "Gemini API", "PyMuPDF", "Tesseract OCR"],
     github: "https://github.com/Yogendra2804/Social-Media-Analyzer",
