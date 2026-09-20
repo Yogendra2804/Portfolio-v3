@@ -52,6 +52,22 @@ export const skills = [
 
 export const projects = [
   {
+    id: 0,
+    title: "Original Portfolio — v1",
+    description:
+      "My first portfolio website — built entirely by hand from scratch with raw HTML, CSS & JavaScript. No frameworks, no templates. Every pixel was intentional.",
+    longDescription:
+      "The origin. Built entirely by hand using raw HTML, CSS, and JavaScript — no frameworks, no UI libraries, just genuine craftsmanship. Features a responsive layout, dark/light mode toggle, AOS scroll animations, Bootstrap grid, and a hamburger nav — all wired manually. This is where it all started.",
+    image: "/images/project-original-portfolio.jpg",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "AOS", "Font Awesome"],
+    github: "https://github.com/Yogendra2804/Portfolio",
+    live: "https://yogendra2804.github.io/Portfolio/",
+    liveLabel: "View Original",
+    featured: true,
+    color: "#FFB347",
+  },
+  {
     id: 1,
     title: "FastAPI Backend Service",
     description:
@@ -147,6 +163,22 @@ export const projects = [
     featured: false,
     color: "#F59E0B",
   },
+  {
+    id: 7,
+    title: "Social Media Analyzer",
+    description:
+      "AI-powered tool that analyzes social media posts from PDFs or images and provides actionable engagement improvements using the Gemini API.",
+    longDescription:
+      "A full-stack application that analyzes social media posts uploaded as PDFs or images and provides AI-powered engagement improvements. Uses PyMuPDF for PDF extraction, Tesseract OCR for image text extraction, and the Gemini API for tone, clarity, and engagement suggestions — with a deterministic heuristic fallback when the API is unavailable.",
+    image: "/images/project-social-media-analyzer.png",
+    tags: ["FastAPI", "React", "Gemini AI", "OCR"],
+    techStack: ["Python", "FastAPI", "React", "Vite", "TypeScript", "Tailwind CSS", "Gemini API", "PyMuPDF", "Tesseract OCR"],
+    github: "https://github.com/Yogendra2804/Social-Media-Analyzer",
+    live: null,
+    liveLabel: "Live Demo",
+    featured: true,
+    color: "#F43F5E",
+  },
 ];
 
 export const experience = [
@@ -228,6 +260,24 @@ export const certifications = [
     icon: "⚙️",
     color: "#FF6B00",
     link: "https://drive.google.com/file/d/1WTKrkJhPvvM267KGMJ-5z518O61l5v44/view?usp=sharing",
+  },
+  {
+    id: 5,
+    title: "Python Object-Oriented Programming",
+    issuer: "LinkedIn Learning",
+    year: "2026",
+    icon: "🐍",
+    color: "#0A66C2",
+    link: "https://www.linkedin.com/learning/certificates/bbfb3059c8b836519572e04cef766e7f2513c7fabbc0d7b25a1c7673d34e7219?trk=share_certificate",
+  },
+  {
+    id: 6,
+    title: "System Design in Cloud",
+    issuer: "LinkedIn Learning",
+    year: "2026",
+    icon: "☁️",
+    color: "#0A66C2",
+    link: "https://www.linkedin.com/learning/certificates/70c3c1a50918157a400993118a858fad7c990a35d57d12d7464adb87fa154c07?trk=share_certificate",
   },
 ];
 
